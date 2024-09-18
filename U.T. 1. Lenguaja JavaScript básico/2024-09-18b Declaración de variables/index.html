@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de declaración de variables</title>
+
+    <script>
+        // "use strict";
+        // 2009 - ES5
+        
+        function testAmbito() {
+            edad1 = 18;
+            var edad2 = 20;
+
+            console.log(edad1);
+            console.log(edad2);
+
+            for (var i = 1; i <= 3; i++) {
+                var edad3 = 22;
+                console.log(edad3);
+            }
+            console.log(edad3);
+        }
+
+        testAmbito();
+
+        console.log(edad1);
+        // console.log(edad2);
+
+        // ES6 2015
+        let edad4 = 24;
+
+        function testAmbitoDos() {
+            let edad5 = 26;
+            console.log(edad5);
+
+            for (let i = 1; i <= 3; i++) {
+                let edad6 = 28
+                console.log(edad6);
+            }
+
+            // console.log(edad6);
+        }
+
+        console.log(edad4);
+        testAmbitoDos();
+        // console.log(edad5);
+
+        const PI = 3.141592;
+        console.log(PI);
+        PI = 9;
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
