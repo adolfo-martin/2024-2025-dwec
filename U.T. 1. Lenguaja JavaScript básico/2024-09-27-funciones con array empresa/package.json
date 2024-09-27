@@ -1,0 +1,12 @@
+{
+  "name": "2024-09-27-funciones-con-array-empresa",
+  "version": "1.0.0",
+  "main": "datos_empresa.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adolfo Martín",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}
