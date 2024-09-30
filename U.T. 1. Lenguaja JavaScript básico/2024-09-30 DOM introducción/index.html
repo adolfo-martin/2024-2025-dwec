@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM</title>
+    </head>
+    <body>
+        <h1>Document Object Model</h1>
+
+        <h2>Lenguajes de programación</h2>
+        <ul id="tUlLanguages">
+            <li>Java</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+        </ul>
+
+        <script>
+            'use strict';
+
+            let nUlLanguages = document.getElementById('tUlLanguages');
+            console.log(nUlLanguages);
+
+            let nLi = document.createElement('li');
+            nUlLanguages.appendChild(nLi);
+
+            let nText = document.createTextNode('C#');
+            nLi.appendChild(nText);
+
+            nUlLanguages.setAttribute('style', 'list-style-type: square');
+
+        </script>
+    </body>
+</html>

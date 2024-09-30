@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tablas</h1>
+
+    <h2>Tabla a mano</h2>
+    <table border="1">
+        <tr>
+            <th>País</th>
+            <th>Código</th>
+        </tr>
+        <tr>
+            <td>España</td>
+            <td>ES</td>
+        </tr>
+        <tr>
+            <td>Francia</td>
+            <td>FR</td>
+        </tr>
+    </table>
+
+    <h2>Tabla con JavaScript</h2>
+    <table id="tTabCountries"></table>
+
+    <script>
+        'use strict';
+
+        let nTable = document.getElementById('tTabCountries');
+        nTable.setAttribute('border', '1');
+
+        let nTr = document.createElement('tr');
+        nTable.appendChild(nTr);
+
+        let nTh = document.createElement('th');
+        nTr.appendChild(nTh);
+        let nText = document.createTextNode('País');
+        nTh.appendChild(nText);
+
+        nTh = document.createElement('th');
+        nTr.appendChild(nTh);
+        nText = document.createTextNode('Código');
+        nTh.appendChild(nText);
+
+        nTr = document.createElement('tr');
+        nTable.appendChild(nTr);
+
+        nTh = document.createElement('td');
+        nTr.appendChild(nTh);
+        nText = document.createTextNode('España');
+        nTh.appendChild(nText);
+
+        nTh = document.createElement('td');
+        nTr.appendChild(nTh);
+        nText = document.createTextNode('ES');
+        nTh.appendChild(nText);
+
+        nTr = document.createElement('tr');
+        nTable.appendChild(nTr);
+
+        nTh = document.createElement('td');
+        nTr.appendChild(nTh);
+        nText = document.createTextNode('Francia');
+        nTh.appendChild(nText);
+
+        nTh = document.createElement('td');
+        nTr.appendChild(nTh);
+        nText = document.createTextNode('FR');
+        nTh.appendChild(nText);
+    </script>
+
+</body>
+</html>
