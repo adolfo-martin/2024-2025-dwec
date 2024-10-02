@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Liga española</h1>
+
+    <select>
+        <option selected disabled></option>
+        <option value="rm">Real Madrid</option>
+        <option value="ba">Fútbol Club Barcelona</option>
+        <option value="am">Atletico de Madrid</option>
+    </select>
+
+    <select id="tSelTeams">
+        <option selected disabled></option>
+    </select>
+
+    <script>
+        'use strict';
+
+        let nSelect = document.getElementById('tSelTeams');
+
+        let nOption = document.createElement('option');
+        nSelect.appendChild(nOption);
+        nOption.setAttribute('value', 'rm');
+        let nText = document.createTextNode('Real Madrid');
+        nOption.appendChild(nText);
+
+        nOption = document.createElement('option');
+        nSelect.appendChild(nOption);
+        nOption.setAttribute('value', 'ba');
+        nText = document.createTextNode('Fútbol Club Barcelona');
+        nOption.appendChild(nText);
+
+        nOption = document.createElement('option');
+        nSelect.appendChild(nOption);
+        nOption.setAttribute('value', 'am');
+        nText = document.createTextNode('Atlético de Madrid');
+        nOption.appendChild(nText);
+
+    </script>
+</body>
+</html>

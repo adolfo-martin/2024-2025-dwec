@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Coches</h1>
+
+    <form>
+        <label>Escribe tu coche: </label>
+
+        <!-- 
+        <input type="text" list="tDalCars">
+        <datalist id="tDalCars">
+            <option value="Volskwagen"></option>
+            <option value="Seat"></option>
+        </datalist> 
+        -->
+
+        <input type="text" list="tDalBrands">
+        <datalist id="tDalBrands"></datalist>
+
+        <script>
+            'use strict';
+
+            const brands = [
+                'Volkswagen',
+                'Mitsubishi',
+                'Renault',
+                'Porsche',
+                'Audi',
+                'Skoda',
+                'Ford',
+                'Toyota',
+                'Seat',
+                'Tesla',
+                'Ferrari',
+                'Dacia',
+                'Nissan',
+                'Chrysler',
+            ];
+
+            
+            let nDatalist = document.getElementById('tDalBrands');
+
+            for (const brand of brands.toSorted()) {
+                let nOption = document.createElement('option');
+                nOption.setAttribute('value', brand);
+                nDatalist.appendChild(nOption);
+            }
+        </script>
+
+    </form>
+</body>
+</html>
