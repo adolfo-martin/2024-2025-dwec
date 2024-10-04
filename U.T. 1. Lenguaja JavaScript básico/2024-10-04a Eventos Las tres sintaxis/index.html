@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            user-select: none;
+        }
+        body {
+            min-height: 100dvh;
+        }
+        p {
+            font-size: 2rem;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <!-- Primera sintaxis. Poner el evento en la propia etiqueta -->
+    <p onclick="alert('Has clickeado en el párrafo uno')"  >Este es el párrafo 1</p>
+
+    <p onmouseover="mostrarMensajeDos(); mostrarMensajeDos();">Este es el párrafo 2</p>
+
+    <p onmouseover="console.log('Dentro')" onmouseout="console.log('Fuera')">Este es el párrafo 3</p>
+
+    <!-- Primera sintaxis. Poner lo mismo desde JS -->
+    <p id="tParFour">Este es el párrafo 4</p>
+
+    <p id="tParFive">Este es el párrafo 5</p>
+
+    <script>
+        'use strict';
+
+        function mostrarMensajeDos() {
+            // alert('Has entrado en el párrafo dos.');
+        }
+
+        function mostrarMensajeCuatro() {
+            alert('Has cliqueado en el párrafo cuatro.');
+        }
+
+        const nParFour = document.getElementById('tParFour');
+        // nParFour.setAttribute("onclick", "mostrarMensajeCuatro()");
+
+        // Segunda sintaxis. Accedo a la propiedad directamente desde JS
+        nParFour.onclick = mostrarMensajeCuatro;
+        nParFour.onclick = () => console.log('Has cliqueado en el párrafo cuatro');
+
+        // Tercera sintaxis. La que es parecida a Java
+        const nParFive = document.getElementById('tParFive');
+        // nParFive.addEventListener('click', mostrarMensajeCuatro);
+        nParFive.addEventListener('click', () => alert('Has cliqueado en el párrafo cinco.'));
+        nParFive.addEventListener('click', () => console.log('Has cliqueado en el párrafo cinco'));
+
+    </script>
+</body>
+</html>
