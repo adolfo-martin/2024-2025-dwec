@@ -1,0 +1,29 @@
+table, tr, td {
+    font-size: 2rem;
+    border: solid 3px black;
+    border-collapse: collapse;
+}
+
+tr:first-child>td:first-child {
+    background-color: red;
+}
+
+tr:first-child>td:nth-child(2) {
+    background-color: green;
+}
+
+tr:first-child>td:last-child {
+    background-color: blue;
+}
+
+tr:last-child>td:first-child {
+    background-color: cyan;
+}
+
+tr:last-child>td:nth-child(2) {
+    background-color: magenta;
+}
+
+tr:last-child>td:last-child {
+    background-color: yellow;
+}

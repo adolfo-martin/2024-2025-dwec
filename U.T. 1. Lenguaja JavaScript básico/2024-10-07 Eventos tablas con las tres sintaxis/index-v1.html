@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td onclick="showMessage('rojo')">lorem1</td>
+            <td onclick="showMessage('verde')">lorem1</td>
+            <td onclick="showMessage('azul')">lorem1</td>
+        </tr>
+        <tr>
+            <td onclick="showMessage('celeste')">lorem1</td>
+            <td onclick="showMessage('purpura')">lorem1</td>
+            <td onclick="showMessage('amarillo')">lorem1</td>
+        </tr>
+    </table>
+
+
+    <p id="tParMessage"></p>
+
+    <script>
+        'use strict';
+
+        /**
+         * Muestra un mensaje en el párrafo dedicado a ello.
+         * @param { string } color - El nombre del color a mostrar.
+         * */
+        function showMessage(color) {
+            const nParagraph = document.getElementById('tParMessage');
+            // const nText = document.createTextNode(`Has cliqueado en el color ${color}`);
+            // nParagraph.appendChild(nText);
+            nParagraph.innerText = `Has cliqueado en el color ${color}`;
+        }
+    </script>
+</body>
+</html>

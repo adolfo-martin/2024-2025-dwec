@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html id="tHtml" lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td onclick="showMessage(this)" data-color-english="red" data-color-german="rot">rojo</td>
+            <td onclick="showMessage(this)" data-color-english="green" data-color-german="grun">verde</td>
+            <td onclick="showMessage(this)" data-color-english="blue" data-color-german="blau">azul</td>
+        </tr>
+        <tr>
+            <td onclick="showMessage(this)" data-color-english="cyan" data-color-german="celblau">celeste</td>
+            <td onclick="showMessage(this)" data-color-english="magenta" data-color-german="magerot">purpura</td>
+            <td onclick="showMessage(this)" data-color-english="yellow" data-color-german="gelb">amarillo</td>
+        </tr>
+    </table>
+
+
+    <p id="tParMessage"></p>
+
+    <script>
+        'use strict';
+
+        /**
+         * Muestra un mensaje en el párrafo dedicado a ello.
+         * @param { object } celda - La celda que recibe el evento.
+         * */
+        function showMessage(celda) {
+            const language = document.getElementById('tHtml').lang;
+
+            if (language === 'en') {
+                var color = celda.dataset.colorEnglish;
+            } else {
+                var color = celda.dataset.colorGerman;
+            }
+
+            const nParagraph = document.getElementById('tParMessage');
+            nParagraph.innerHTML = `Has cliqueado en el color <strong>${color}</strong>.`;
+        }
+    </script>
+</body>
+</html>
