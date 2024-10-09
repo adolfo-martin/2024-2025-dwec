@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.google.es/procesar.php">
+        <label>Selecciona un coche: </label>
+        <select name="car" onchange="console.log('Coche cliqueado')">
+            <option selected disabled></option>
+            <option value="a3">Audi A3</option>
+            <option value="pe">Peugeot 308</option>
+            <option value="rm">Renault Megane</option>
+            <option value="sl">Seat León</option>
+            <option value="sk">Skoda Spaceback</option>
+            <option value="vg">Volwagen Golf</option>
+        </select>
+
+        <button type="submit">Enviar información</button> 
+    </form>
+
+</body>
+</html>

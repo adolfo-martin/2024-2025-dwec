@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚗 Coches</title>
+</head>
+<body>
+    <header>Arcas Renting</header>
+    <nav></nav>
+    <aside></aside>
+    <main>
+        <form action="https://www.arcasrenting.com/renting.php">
+            <header>Selección de vehículos</header>
+            <select name="" id="tSelCars" onchange="showCar()">
+                <option selected disabled></option>
+            </select>
+        </form>
+
+        <br>
+        <br>
+        <img id="tImgCar" src="" width="200px" height="200px">
+    </main>
+    <aside>El alquiler más asequible de Lorca</aside>
+    <footer>@ Capgemini 2024</footer>
+
+    <script src="./code/cars.js"></script>
+    <script>
+        const nSelect = document.getElementById('tSelCars');
+
+        for (const car of cars) {
+            const nOption = document.createElement('option');
+            nOption.setAttribute('value', car.key)
+            nSelect.appendChild(nOption);
+
+            const nText = document.createTextNode(car.model);
+            nOption.appendChild(nText);
+        }
+
+        function showCar() {
+            const nSelect = document.getElementById('tSelCars');
+            const carId = nSelect.value; // 'vg'
+            
+            // for (const car of cars) {
+            //     if (car.key === carId) {
+            //         const nImg = document.getElementById('tImgCar');
+            //         nImg.setAttribute('src', `./photos/${car.photo}`);
+            //     }
+            // }
+
+            const car = cars.find(car => car.key === carId);
+            const nImg = document.getElementById('tImgCar');
+            nImg.setAttribute('src', `./photos/${car.photo}`);
+        }
+
+    </script>
+</body>
+</html>
