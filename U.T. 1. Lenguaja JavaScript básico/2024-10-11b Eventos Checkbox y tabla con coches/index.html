@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <script type="module">
+        import { cars } from './code/data.js';
+
+        // evento "cuando todo el HTML ha sido cargado"
+        document.addEventListener('DOMContentLoaded', fillCars);
+
+        function fillCars() {
+            const nDivCars = document.getElementById('tDivCoches');
+            
+            for (const car of cars) {
+                const nCheckbox = document.createElement('input');
+                nDivCars.appendChild(nCheckbox);
+                nCheckbox.setAttribute('type', 'checkbox');
+                nCheckbox.setAttribute('id', `tChk${car.key}`);
+                nCheckbox.setAttribute('value', car.key);
+                // nCheckbox.setAttribute('onchange', `showCar('${car.key}')`);
+                nCheckbox.addEventListener('change', showCar);
+    
+                const nLabel = document.createElement('label');
+                nDivCars.appendChild(nLabel);
+                nLabel.setAttribute('for', `tChk${car.key}`);
+    
+                const nText = document.createTextNode(car.model);
+                nLabel.appendChild(nText);
+            }
+        }
+
+        // function showCar(carId) {
+        function showCar(e) {
+            const nCheckbox = e.target; // devuelve la etiqueta que lanza el evento
+            const carId = nCheckbox.value; // de la etiqueta me quedo con la parte que voy a usar
+            // console.log(carId);
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Vehículos</h1>
+
+    <div id="tDivCoches">
+        <!-- 
+        <input type="checkbox" id="tChka3" value="a3" onchange="showCar('a3')">
+        <label for="tChka3">Audi A3</label> 
+        -->
+    </div>
+
+    <br>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Modelo</th>
+                <th>Foto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ferrari Testarossa</td>
+                <td><img src="ferrari_testarossa.jpg"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
