@@ -6,3 +6,7 @@ table, tr, th, td {
 body {
     background-color: lightsteelblue;
 }
+
+img {
+    height: 100px;
+}
