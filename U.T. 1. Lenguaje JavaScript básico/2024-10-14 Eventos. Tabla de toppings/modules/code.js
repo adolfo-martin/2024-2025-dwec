@@ -10,10 +10,9 @@ function setup(e) {
 }
 
 function fillTableToppings(toppings) {
+    const nTbody = document.getElementById('tBbdToppings');
 
     toppings.forEach(topping => {
-        const nTbody = document.getElementById('tBbdToppings');
-    
         const nTr = document.createElement('tr');
         nTbody.appendChild(nTr);
 
@@ -46,9 +45,20 @@ function fillTableToppings(toppings) {
 
 function calculatePrice(e) {
     const nCheckbox = e.target; // target me la la etiqueta que lanzo el evento
-    const toppindId = nCheckbox.value;
-    const selectedTopping = toppings.find(topping => topping.id === toppindId);
+    // const toppindId = nCheckbox.value;
+    const toppindId = nCheckbox.dataset.topping;
+
     const nPrice = document.getElementById('tParPrice');
-    totalPrice += selectedTopping.price;
-    nPrice.innerText = totalPrice;
+    // const selectedTopping = toppings.find(topping => topping.id === toppindId);
+    // totalPrice += selectedTopping.price;
+    const price = parseFloat(nCheckbox.dataset.price);
+    // if (nCheckbox.checked)
+    //     totalPrice += price;
+    // else
+    //     totalPrice -= price;
+
+    // nCheckbox.checked ? totalPrice += price : totalPrice -= price;
+    totalPrice += nCheckbox.checked ? price : price * (-1);
+
+    nPrice.textContent = totalPrice; // innerText  innerHTML  textContent
 }

@@ -1,0 +1,13 @@
+{
+  "name": "2024-10-16-eventos.-seleccion-empleados-color-pelo",
+  "version": "1.0.0",
+  "main": "data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}
