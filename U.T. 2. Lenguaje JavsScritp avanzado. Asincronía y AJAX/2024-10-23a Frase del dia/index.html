@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote of the day</title>
+
+    <style>
+        * {
+            border: solid;
+        }
+
+        body {
+            height: 100dvh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+
+    <script type="module">
+        document.addEventListener('DOMContentLoaded', retrieveAndShowQuote);
+
+        function retrieveAndShowQuote(_) {
+            fetch('https://favqs.com/api/qotd')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data.quote.body);
+                    console.log(data.quote.author);
+                    const nQuote = document.getElementById('tParQuote');
+                    nQuote.textContent = data.quote.body;  //textContent innerText innerHTML
+                    const nAuthor = document.getElementById('tParAuthor');
+                    nAuthor.textContent = data.quote.author;
+                })
+                .catch(console.error);
+            console.log('🏁');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Quote of the day</h1>
+    </header>
+
+    <main>
+        <p id="tParQuote">dfasfasfd</p>
+        <p id="tParAuthor">sadfsaf</p>
+    </main>
+
+</body>
+</html>

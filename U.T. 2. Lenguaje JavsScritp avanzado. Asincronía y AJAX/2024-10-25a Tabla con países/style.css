@@ -1,0 +1,16 @@
+table, tr, th, td {
+    border: solid 2px blue;
+    border-collapse: collapse;
+}
+
+img {
+    height: 1rem;
+}
+
+#tDivDetails {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background-color: aqua;
+}
