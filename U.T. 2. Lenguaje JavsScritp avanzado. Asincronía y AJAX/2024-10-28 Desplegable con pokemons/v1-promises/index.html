@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+
+    <script type="module" src="./code.js"></script>
+</head>
+<body>
+    <header>Pokemons</header>
+
+    <main>
+        <section>
+            <label>Selecciona un pokemon</label>
+            <select id="tSelPokemons">
+                <option selected disabled></option>     
+                <!-- <option value="1">Bulbasur</option>        -->
+            </select>
+        </section>
+
+        <section>
+            <span id="tSpnNombre"></span>
+            <img id="tImgImagen">
+            <span id="tSpnAltura"></span>
+            <span id="tSpnPeso"></span>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="./code.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>Nombres</header>
+
+    <form>
+        <label for="">Cuántos nombres quieres: </label>
+        <input type="range" id="tRngQuantity" min="1" max="10">
+        <input type="text" id="tTxtQuantity" disabled>
+        <br>
+
+        <fieldset>
+            <legend>Género</legend>
+            
+            <input type="radio" name="gender" id="tRadMale" value="male">
+            <label for="tRadMale">Masculino</label>
+            <input type="radio" name="gender" id="tRadFemale" value="female">
+            <label for="tRadFemale">Femenino</label>
+            <input type="radio" name="gender" id="tRadBoth" value="both" checked>
+            <label for="tRadBoth">Ambos</label>
+        </fieldset>
+
+        <br>
+        <input type="button" id="tButAskforNames" value="Pedir nombres">
+    </form>
+
+    <br>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombres</th>
+            </tr>
+        </thead>
+        <tbody id="tBdyNames"></tbody>
+    </table>
+    
+</body>
+</html>
