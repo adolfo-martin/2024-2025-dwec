@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fichero 2</h1>
+
+    <script type="module">
+        const params = new URLSearchParams(window.location.search);
+        console.log(params);
+        const fruta = params.get('fruta');
+        console.log(fruta);
+        const verdura = params.get('verdura');
+        console.log(verdura);
+
+        document.querySelector('h1').textContent = fruta;
+        document.querySelector('title').textContent = verdura;
+
+        const carne = params.get('carne');
+        if (!carne) {  // false = null = undefined = '' = 0
+            console.log('No hay carne');
+        } else {
+            console.log(carne);
+        }
+    </script>
+
+</body>
+</html>

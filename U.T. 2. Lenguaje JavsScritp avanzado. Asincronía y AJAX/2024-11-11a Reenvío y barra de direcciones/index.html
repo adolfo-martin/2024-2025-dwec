@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>Portada</h1></header>
+
+    <nav>
+        <ul>
+            <li><a href="./fichero1.html?fruta=aguacate&verdura=tomate">Fichero 1</a></li>
+            <li><a href="./fichero2.html?fruta=boniato&verdura=lechuga">Fichero 2</a></li>
+            <li><a href="./fichero3.html?fruta=cereza&verdura=escarola">Fichero 3</a></li>
+        </ul>
+    </nav>
+
+    <button>Ir a página 2</button>
+
+    <script type="module">
+        // window.location sirve para hacer redirecciones
+
+        // setTimeout(
+        //     () => window.location = './fichero2.html',
+        //     3000
+        // );
+
+        document.querySelector('button').addEventListener('click', _ => window.location = './fichero2.html');
+
+        // setTimeout(
+        //     () => document.querySelector('button').click(),
+        //     3000
+        // );
+
+    </script>
+
+</body>
+</html>
