@@ -1,0 +1,8 @@
+version: '3.1'
+services:
+  thermomix:
+    container_name: ws-thermomix
+    image: adomargon/apache-php-thermomix:0.1
+    restart: always
+    ports:
+      - 8080:80
