@@ -1,0 +1,11 @@
+# CRUD: GET (Retrieve), POST (Create), UPDATE (Update), DELETE (Delete)
+
+GET http://localhost:8080/api/continents
+
+###
+
+GET http://localhost:8080/api/countries
+
+###
+
+GET http://localhost:8080/api/countries/ESP
