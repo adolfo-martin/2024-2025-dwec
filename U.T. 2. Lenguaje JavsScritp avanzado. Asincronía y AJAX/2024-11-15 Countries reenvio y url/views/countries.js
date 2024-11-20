@@ -1,17 +1,25 @@
 import CountriesService from "../services/CountriesService.js";
+import { openSpinner, closeSpinner} from '../utils/spinner.lib.js';
 
 document.addEventListener('DOMContentLoaded', setup);
 
 
 async function setup(_) {
-    const continentCode = getContinentCodeFromUrl();
-
-    const service = new CountriesService();
-    // const countries = await service.retrieveCountriesByContinent(continentCode);
-    await service.retrieveCountriesWithFlagsByContinent(continentCode);
-    return;
-
-    await fillTableWithCountries(countries);
+    try {
+        openSpinner();
+        const continentCode = getContinentCodeFromUrl();
+    
+        const service = new CountriesService();
+        const countries = await service.retrieveCountriesByContinent(continentCode);
+        // await service.retrieveCountriesWithFlagsByContinent(continentCode);
+        // return;
+    
+        await fillTableWithCountries(countries);
+    } catch (error) {
+        window.location = `/views/errors.html?error-code=500&message=${error.message}`;
+    } finally {
+        closeSpinner();
+    }
 }
 
 

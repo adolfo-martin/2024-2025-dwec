@@ -1,6 +1,9 @@
 import CountriesService, { CountriesServiceException } from "/services/CountriesService.js";
+import { openSpinner, closeSpinner} from '../utils/spinner.lib.js';
+
 
 document.addEventListener('DOMContentLoaded', async _ => {
+    openSpinner();
     setupButton();
 
     const service = new CountriesService();
@@ -9,6 +12,8 @@ document.addEventListener('DOMContentLoaded', async _ => {
         renderContinents(continents);
     } catch (error) {
         window.location = `/views/errors.html?error-code=500&message=${error.message}`;
+    } finally {
+        closeSpinner();
     }
 });
 
