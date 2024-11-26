@@ -1,0 +1,2 @@
+### Recupera la lista de planetas
+GET https://swapi.dev/api/planets

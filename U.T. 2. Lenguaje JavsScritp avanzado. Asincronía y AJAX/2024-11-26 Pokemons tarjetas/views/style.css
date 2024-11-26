@@ -1,0 +1,19 @@
+.container-cards {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+}
+
+.card {
+    border: solid 5px #ffd700;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-size: cover;
+    background-position: center;
+    background-color: #f7eba9;
+    padding-top: 5rem;
+
+    &>div {
+        background-color: white;
+    }
+}
