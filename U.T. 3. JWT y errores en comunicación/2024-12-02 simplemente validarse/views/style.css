@@ -1,0 +1,41 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --color-100: #cedfe5;
+    --color-900: #010130;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100dvh;
+    display: grid;
+    place-content: center;
+}
+
+form {
+    background-color: var(--color-100);
+    color: var(--color-900);
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    padding: 1rem;
+    gap: 1rem;
+
+    header {
+        font-weight: bold;
+        font-size: 2em;
+        grid-column: 1 / span 2;
+    }
+
+    &>label {
+        text-align: right;
+    }
+
+    button {
+        grid-column: 1 / span 2;
+        width: fit-content;
+    }
+}

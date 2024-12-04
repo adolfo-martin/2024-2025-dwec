@@ -1,0 +1,18 @@
+### Autenticación de un usuario suministrando login y password.
+POST  http://192.168.0.80:8081/api/login_user
+content-type: application/x-www-form-urlencoded
+
+username=sonia.silverado
+&password=s
+
+###
+
+GET http://192.168.0.80:8081/api/validate_token
+content-type: application/json
+
+{"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE3MzMxNDI0MjMsImV4cCI6MTczMzE1NjgyM30.CExD904spCbBSerp3AR97NOu9BBvbuYsSyl08EqjoeM"}
+
+###
+
+GET http://192.168.0.80:8081/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE3MzMxNDI0MjMsImV4cCI6MTczMzE1NjgyM30.CExD904spCbBSerp3AR97NOu9BBvbuYsSyl08EqjoeM
