@@ -1,0 +1,6 @@
+### Autenticación de un usuario suministrando login y password.
+POST  http://127.0.0.1:8081/api/login_user
+content-type: application/x-www-form-urlencoded
+
+username=sonia.silverado
+&password=s
