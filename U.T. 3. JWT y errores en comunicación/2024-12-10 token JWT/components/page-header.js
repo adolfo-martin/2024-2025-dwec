@@ -18,7 +18,7 @@ class PageHeaderComponent extends HTMLElement {
             }
         </style>
         <header class="page-header">
-            <div class="company">Jugetes Arcas</div>
+            <div class="company">Juguetes Arcas</div>
             <div class="fullname"></div>
             <button type="button" id="tButSession"></button>
         </header>
