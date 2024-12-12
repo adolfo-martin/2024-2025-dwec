@@ -1,0 +1,63 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+dialog {
+    padding: auto;
+    margin: auto;
+    border-radius: 1rem;
+}
+
+form {
+    display: grid;
+    grid-template-areas: 
+        "header          header        "
+        "label-username  input-username"
+        "label-password  input-password"
+        "validate        validate      "
+    ;
+
+    padding: 1rem;
+    gap: 1rem;
+
+    header {
+        grid-area: header;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .equis {
+        /* grid-area: equis; */
+        background-color: red;
+        padding: 0.25em 0.5em;
+        place-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    label {
+        text-align: right;
+    }
+
+    input[type=text] {
+        grid-area: input-username;
+    }
+
+    input[type=password] {
+        grid-area: input-password;
+    }
+
+    button {
+        grid-area: validate;
+        place-self: center;
+        padding: 0.25em 1em;
+        border: none;
+    }
+}
