@@ -1,15 +1,13 @@
-version: "3.0"
-
 services:
   authentication:
-    image: adomargon/node-authentication:1.0
+    image: adomargon/node-authentication:1.8
     container_name: authentication_container
     ports:
       - "8081:80"
     restart: always
 
   playmobil:
-    image: adomargon/server_playmobil:0.15
+    image: adomargon/server_playmobil:0.22
     container_name: playmobil_container
     ports:
       - "8082:8082"

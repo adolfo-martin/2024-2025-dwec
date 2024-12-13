@@ -1,19 +1,22 @@
 import PlaymobilService, { PlaymobilServiceException } from "../services/PlaymobilService.js";
+import { closeSpinner, openSpinner } from "./spinner.lib.js";
 
 
 document.addEventListener('DOMContentLoaded', async _ => {
+    openSpinner();
     const token = getToken();
 
     const service = new PlaymobilService();
     try {
         const series = await service.retrieveSeries(token);
+        renderSeries(series);
     } catch (error) {
-        alert(error.message);
         window.location = `/views/error.html?code=500&message=${error.message}`;
         return;
+    } finally {
+        closeSpinner();
     }
 
-    renderSeries(series);
 });
 
 
