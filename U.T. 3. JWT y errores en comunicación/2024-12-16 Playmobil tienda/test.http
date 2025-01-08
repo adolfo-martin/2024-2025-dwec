@@ -1,0 +1,36 @@
+POST http://127.0.0.1:8081/api/login_user
+content-type: application/x-www-form-urlencoded
+
+username=sonia.silverado
+&password=s
+
+# ### Autenticación de un usuario suministrando login y password.
+# POST  http://127.0.0.1:8081/api/login_user
+# content-type: application/x-www-form-urlencoded
+
+# username=sonia.silverado
+# &password=s
+
+###
+GET http://127.0.0.1:8082/api/series
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE3MzQzNTI1MTAsImV4cCI6MTczNDM2NjkxMH0.T7mbUK7s1a2b3oqEIuoquGouSl_TEJ21pwaaHCaTr8Y
+
+# ###
+# GET http://127.0.0.1:8082/api/boxes
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE3MzQzNTI1MTAsImV4cCI6MTczNDM2NjkxMH0.T7mbUK7s1a2b3oqEIuoquGouSl_TEJ21pwaaHCaTr8Y
+
+# ###
+# GET http://127.0.0.1:8082/api/serie/1703135e-03b3-4a32-b8df-16965d19b862/boxes
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE3MzQzNTI1MTAsImV4cCI6MTczNDM2NjkxMH0.T7mbUK7s1a2b3oqEIuoquGouSl_TEJ21pwaaHCaTr8Y
+
+# ###
+# GET http://127.0.0.1:8082/api/box/db1e0071-08de-4c8d-b106-10be0cf694d5
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE3MzQzNTI1MTAsImV4cCI6MTczNDM2NjkxMH0.T7mbUK7s1a2b3oqEIuoquGouSl_TEJ21pwaaHCaTr8Y
+
+# ###
+# GET http://127.0.0.1:8082/api/figures
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE3MzQzNTI1MTAsImV4cCI6MTczNDM2NjkxMH0.T7mbUK7s1a2b3oqEIuoquGouSl_TEJ21pwaaHCaTr8Y
+
+# ###
+# GET http://127.0.0.1:8082/api/figure/5adcafef-2106-476c-9a3a-7628b900d1ad
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZpcnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE3MzQzNTI1MTAsImV4cCI6MTczNDM2NjkxMH0.T7mbUK7s1a2b3oqEIuoquGouSl_TEJ21pwaaHCaTr8Y
