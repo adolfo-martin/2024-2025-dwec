@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, tr, th, td {
+            border: solid 2px blue;
+            border-collapse: collapse;
+        }
+    </style>
+
+    <script type="module" src="/employees.js"></script>
+</head>
+<body>
+    <header>Employees</header>
+    <main>
+        <label>Filtrado por nombre: </label>
+        <input type="text" id="tTxtNameFilter">
+
+        <table id="tTabEmployees">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+</body>
+</html>

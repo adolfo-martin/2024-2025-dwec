@@ -1,0 +1,16 @@
+{
+  "name": "typescript-project",
+  "version": "1.0.0",
+  "description": "A TypeScript project with basic setup.",
+  "main": "src/app.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

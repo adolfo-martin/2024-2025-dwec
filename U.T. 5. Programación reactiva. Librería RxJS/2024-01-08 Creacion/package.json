@@ -1,0 +1,17 @@
+{
+  "name": "2024-01-08-creacion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01 of.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Adolfo Martín",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "rxjs": "^7.8.1",
+    "xhr2": "^0.2.1"
+  }
+}

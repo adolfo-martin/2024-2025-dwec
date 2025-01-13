@@ -1,0 +1,13 @@
+:host {
+    --red-angular: rgb(202, 7, 7); 
+    background-color: pink;
+    display: inline-block;
+    border: solid 5px var(--red-angular);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+h1 {
+    color: var(--red-angular);
+    text-align: center;
+}
