@@ -1,0 +1,11 @@
+:host {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    background-color: burlywood;
+    padding: 1rem;
+}
+
+input[type=radio], input[type=checkbox] {
+    accent-color: orange;
+}

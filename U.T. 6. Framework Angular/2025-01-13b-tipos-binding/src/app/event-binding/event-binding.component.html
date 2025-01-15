@@ -1,5 +1,7 @@
 <p>Has pulsado la letra <b>{{letraPulsada}}</b></p>
 
 <br>
-<button type="button" ()>Letra A</button>
-<button type="button">Letra B</button>
+<button type="button" (click)="registrarLetra('A')">Letra A</button>
+<button type="button" (click)="registrarLetra('B')">Letra B</button>
+
+<button (click)="registrarLetraConEvento($event)" data-letra="C">Letra C</button>

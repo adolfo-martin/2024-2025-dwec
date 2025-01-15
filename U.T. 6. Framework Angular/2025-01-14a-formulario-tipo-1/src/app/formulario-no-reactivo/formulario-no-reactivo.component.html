@@ -1,0 +1,48 @@
+<div>
+    <label>Nombre: </label>
+    <input type="text" [(ngModel)]="datos.nombre">
+</div>
+
+<div>
+    <label>Apellidos: </label>
+    <input type="text" [(ngModel)]="datos.apellidos">
+</div>
+
+<div>
+    <label for="">Género:</label>
+    <br>
+
+    <input type="radio" name="genero" id="tRadMasculino" value="masculino" [(ngModel)]="datos.genero">
+    <label for="tRadMasculino">Masculino</label>
+    <input type="radio" name="genero" id="tRadFemenino" value="femenino" [(ngModel)]="datos.genero">
+    <label for="tRadFemenino">Femenino</label>
+</div>
+
+<div>
+    <label>Aficiones</label>
+    <br>
+    <input type="checkbox" id="tChkMusica" [(ngModel)]="datos.aficionMusica">
+    <label for="tChkMusica">Música</label>
+
+    <input type="checkbox" id="tChkDeportes" [(ngModel)]="datos.aficionDeportes">
+    <label for="tChkDeportes">Deportes</label>
+
+    <input type="checkbox" id="tChkCine" [(ngModel)]="datos.aficionCine">
+    <label for="tChkCine">Cine</label>
+</div>
+
+<div>
+    <label>Situación laboral: </label>
+    <select [(ngModel)]="datos.situacionLaboral">
+        <option *ngFor="let situacion of situacionesLaborales" [value]="situacion.id">{{situacion.descripcion}}</option>
+    </select>
+</div>
+
+<div *ngIf="datos.situacionLaboral === '1'">
+    <label>Qué estudias: </label>
+    <input type="text">
+</div>
+
+<pre>
+    {{ datos | json }}
+</pre>

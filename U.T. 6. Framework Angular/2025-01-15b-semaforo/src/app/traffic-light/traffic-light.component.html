@@ -1,0 +1,34 @@
+<div class="bg-black inline-flex flex-col gap-2 p-4 items-center">
+    <!-- Rojo -->
+  <div
+    *ngIf="!isRedLightTurnedOn"
+    class="bg-red-500 size-14 rounded-full brightness-[0.2]"
+  ></div>
+
+  <div
+    *ngIf="isRedLightTurnedOn"
+    class="bg-red-500 size-14 rounded-full brightness-100"
+  ></div>
+
+  <!-- Ambar -->
+  <div
+    *ngIf="!isAmbarLightTurnedOn"
+    class="bg-amber-500 size-14 rounded-full brightness-[0.2]"
+  ></div>
+
+  <!-- Verde -->
+  <div
+    *ngIf="isAmbarLightTurnedOn"
+    class="bg-amber-500 size-14 rounded-full brightness-100"
+  ></div>
+
+  <div
+    *ngIf="!isGreenLightTurnedOn"
+    class="bg-green-500 size-14 rounded-full brightness-[0.2]"
+  ></div>
+
+  <div
+    *ngIf="isGreenLightTurnedOn"
+    class="bg-green-500 size-14 rounded-full brightness-100"
+  ></div>
+</div>
