@@ -1,0 +1,13 @@
+:host {
+    background-color: bisque;
+    border: solid 3px black;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+img {
+    width: 150px;
+}
