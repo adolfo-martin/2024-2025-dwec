@@ -1,3 +1,13 @@
-<span>Nombre oficial: {{ country?.name?.official }}</span>
+<!-- <span>Nombre oficial: {{ country?.name?.official }}</span>
 <span>Capital: {{ country?.capital }}</span>
-<img [src]="country?.flags?.svg" alt="">
+<img [src]="country?.flags?.svg" alt=""> -->
+
+<div *ngIf="country$ | async as country; else mensaje" >
+    <span >Nombre oficial: {{ country.name.official }}</span>
+    <span>Capital: {{ country.capital }}</span>
+    <img [src]="country.flags.svg" alt="">
+</div>
+
+<ng-template #mensaje>
+    <div>Espere, por favor.</div>
+</ng-template>

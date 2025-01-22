@@ -4,6 +4,7 @@ import { delay, map, Observable } from 'rxjs';
 
 
 export type CountryT = {
+  cca3: string,
   name: { official: string },
   capital: string,
   flags: { svg: string },
@@ -20,7 +21,10 @@ export class CountriesService {
 
   public getCountries$(): Observable<CountryT[]> {
     // @ts-ignore
-    return this.http.get(CountriesService.URL_BASE + '/all');
+    return this.http.get(CountriesService.URL_BASE + '/all').pipe(
+      // @ts-ignore
+      delay(3000),
+    );
   }
 
 

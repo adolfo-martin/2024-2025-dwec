@@ -1,0 +1,7 @@
+<select *ngIf="countries$ | async as countries; else mensajeEspera">
+    <option *ngFor="let country of countries" [value]="country.cca3">{{ country.name.official }}</option>
+</select>
+
+<ng-template #mensajeEspera>
+    <span>Espere, estamos recuperando la información.</span>
+</ng-template>

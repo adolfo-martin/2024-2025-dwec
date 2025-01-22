@@ -1,0 +1,12 @@
+<input list="countries"/>
+@if (countries$ | async; as countries) {
+    <datalist id="countries">
+        @for (country of countries; track country) {
+            <option [value]="country.name">{{ country.name }}</option>
+        } @empty {
+            <div>No existen países.</div>
+        }
+    </datalist>
+} @else {
+    <div>Espere, por favor.</div>
+}

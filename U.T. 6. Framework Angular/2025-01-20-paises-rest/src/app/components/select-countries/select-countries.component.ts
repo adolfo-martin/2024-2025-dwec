@@ -1,20 +1,18 @@
 import { Component } from '@angular/core';
 import { CountriesService, CountryT } from '../../services/countries.service';
-import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'list-countries',
+  selector: 'select-countries',
   imports: [ CommonModule ],
-  templateUrl: './list-countries.component.html',
-  styleUrl: './list-countries.component.css'
+  templateUrl: './select-countries.component.html',
+  styleUrl: './select-countries.component.css'
 })
-export class ListCountriesComponent {
-  // countries: CountryT[] = [];
+export class SelectCountriesComponent {
   countries$: Observable<CountryT[]>;
 
   constructor(private service: CountriesService) {
-    // this.service.getCountries$().subscribe(countries => this.countries = countries);
     this.countries$ = this.service.getCountries$();
   }
 }
