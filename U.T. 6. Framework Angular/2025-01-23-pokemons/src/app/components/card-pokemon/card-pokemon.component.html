@@ -1,0 +1,15 @@
+<div>
+    <button (click)="reportPositiveVote($event)">Positivo</button>
+    <button (click)="reportNegativeVote($event)">Negativo</button>
+</div>
+
+<label>Nombre: </label>
+<span *ngIf="pokemon$ |async as pokemon">{{pokemon.name}}</span>
+
+<label>Peso: </label>
+<span *ngIf="pokemon$ |async as pokemon">{{pokemon.weight}}</span>
+
+<label>Altura: </label>
+<span *ngIf="pokemon$ |async as pokemon">{{pokemon.height}}</span>
+
+<img *ngIf="pokemon$ |async as pokemon" [src]="pokemon.frontImage" [alt]="pokemon.name">

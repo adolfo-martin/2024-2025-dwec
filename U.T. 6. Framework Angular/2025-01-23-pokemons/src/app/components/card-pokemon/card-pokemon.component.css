@@ -1,0 +1,17 @@
+:host {
+    display: inline-flex;
+    flex-direction: column;
+    border: solid;
+}
+
+label {
+    font-weight: bold;
+}
+
+button:nth-child(1) {
+    background-color: green;
+}
+
+button:nth-child(2) {
+    background-color: red;
+}

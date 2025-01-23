@@ -1,0 +1,38 @@
+<h4>Votos positivos</h4>
+<p>{{ positiveVotesCounter }}</p>
+
+<h4>Votos negativos</h4>
+<p>{{ negativeVotesCounter }}</p>
+
+<br /><br /><br />
+
+<card-pokemon
+  pokemon="21"
+  (positiveVoted)="processPositiveVote($event)"
+  (negativeVoted)="processNegativeVote($event)"
+  (pokemonLoaded)="processPokemonLoaded($event)"
+></card-pokemon>
+
+<card-pokemon
+  pokemon="22"
+  (positiveVoted)="processPositiveVote($event)"
+  (negativeVoted)="processNegativeVote($event)"
+></card-pokemon>
+
+<card-pokemon
+  pokemon="1"
+  (positiveVoted)="processPositiveVote($event)"
+  (negativeVoted)="processNegativeVote($event)"
+></card-pokemon>
+
+<card-pokemon
+  pokemon="2"
+  (positiveVoted)="processPositiveVote($event)"
+  (negativeVoted)="processNegativeVote($event)"
+></card-pokemon>
+
+<card-pokemon
+  pokemon="3"
+  (positiveVoted)="processPositiveVote($event)"
+  (negativeVoted)="processNegativeVote($event)"
+></card-pokemon>
