@@ -1,0 +1,10 @@
+<h1>Categorías</h1>
+
+<br>
+<select (change)="showProducts($event)" *ngIf="categories$ | async as categories">
+    <option selected disabled>Seleccione una categoría</option>
+    <option *ngFor="let category of categories" [value]="category.slug">{{category.name}}</option>
+</select>
+
+<!-- <br>
+<button type="button">Mostrar productos</button> -->

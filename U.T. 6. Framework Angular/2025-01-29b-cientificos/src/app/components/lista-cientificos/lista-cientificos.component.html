@@ -1,0 +1,7 @@
+<ul *ngIf="cientificos">
+    <li *ngFor="let cientifico of cientificos">
+        <a routerLink="/cientifico/{{cientifico.id}}">
+            {{cientifico.nombre}}
+        </a>
+    </li>
+</ul>

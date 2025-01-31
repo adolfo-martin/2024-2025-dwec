@@ -1,0 +1,18 @@
+:host {
+    color: var(--color-100);
+    font-size: 2rem;
+    
+}
+
+ul {
+    padding: 0.5rem;
+    background-color: var(--color-500);
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,0 +1,8 @@
+div {
+    background-color: var(--color-900);
+    color: var(--color-100);
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.5rem;
+}

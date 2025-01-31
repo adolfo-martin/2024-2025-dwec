@@ -1,0 +1,12 @@
+<table>
+    <thead>
+        <tr>
+            <th>Cientificos</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="cientificos">
+        <tr *ngFor="let cientifico of cientificos">
+            <td (click)="mostrarCientifico(cientifico.id)">{{cientifico.nombre}}</td>
+        </tr>
+    </tbody>
+</table>
