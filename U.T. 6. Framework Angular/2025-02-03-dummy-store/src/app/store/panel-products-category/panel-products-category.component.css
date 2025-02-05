@@ -1,0 +1,8 @@
+table, tr, th, td {
+    border: solid;
+    border-collapse: collapse;
+}
+
+td>img {
+    height: 100px;
+}

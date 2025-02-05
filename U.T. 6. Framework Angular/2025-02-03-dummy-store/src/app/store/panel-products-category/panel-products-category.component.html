@@ -1,0 +1,15 @@
+<h1>Productos de la categoría </h1>
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">Producto</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="products$ | async as products">
+        <tr *ngFor="let product of products">
+            <td>{{product.title}}</td>
+            <td><img [src]="product.thumbnail" [alt]="product.title" [title]="product.title"></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,14 @@
+<h1>Categorías</h1>
+
+<div *ngIf="categories$ | async as categories">
+  <div *ngFor="let category of categories">
+    <input
+      type="radio"
+      name="category"
+      [id]="category.slug"
+      [value]="category.slug"
+      (change)="gotoPanelProductsOfCategorySelected($event)"
+    />
+    <label [for]="category.slug">{{ category.name }}</label>
+  </div>
+</div>
