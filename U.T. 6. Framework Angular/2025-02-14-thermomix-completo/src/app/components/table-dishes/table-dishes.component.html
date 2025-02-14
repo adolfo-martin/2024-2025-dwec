@@ -1,0 +1,12 @@
+<table *ngIf="dishes$ | async as dishes">
+    <thead>
+        <tr>
+            <th>Libros</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dish of dishes">
+            <td>{{ dish.nombre }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,12 @@
+<table *ngIf="books$ | async as books">
+    <thead>
+        <tr>
+            <th>Libros</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let book of books">
+            <td>{{ book.titulo }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,7 @@
+<div *ngIf="dishes$ | async as dishes">
+    <input list="datalist-dishes" (click)="showDish($event)"/>
+    
+    <datalist id="datalist-dishes">
+      <option *ngFor="let dish of dishes" [value]="dish.nombre" [attr.data-dish]="dish.clave"></option>
+    </datalist>
+</div>

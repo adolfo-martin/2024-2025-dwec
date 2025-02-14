@@ -3,6 +3,7 @@ import { ThermomixService } from '../../services/thermomix.service';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { Book } from '../../models/book.model';
 
 @Component({
   selector: 'select-books',
@@ -14,7 +15,7 @@ export class SelectBooksComponent {
   private service = inject(ThermomixService);
   books$ = this.service.getBooks$();
   labelSignal = input.required<string>({ alias: 'label' });
-  book$: Observable<any> | undefined;
+  book$: Observable<Book> | undefined;
   bookChanged = output<string>();
   private router = inject(Router);
 
@@ -26,6 +27,6 @@ export class SelectBooksComponent {
   }
 
   handlerShowDishes($event: MouseEvent) {
-    this.router.navigate(['books', '1111', 'dishes']);
+    this.router.navigate(['books', '2547', 'dishes']);
   }
 }

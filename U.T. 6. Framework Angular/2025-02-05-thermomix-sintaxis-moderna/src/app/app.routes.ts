@@ -4,5 +4,5 @@ import { TabDishesComponent } from './components/tab-dishes/tab-dishes.component
 
 export const routes: Routes = [
     { path: 'books', component: TabBooksComponent },
-    { path: 'books/:bookCode/dishes', component: TabDishesComponent},
+    { path: 'books/:bookId/dishes', component: TabDishesComponent},
 ];

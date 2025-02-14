@@ -3,14 +3,14 @@
     <select (change)="handlerBookChanged($event)">
         <option selected disabled hidden></option>
         @for (book of books; track book) {
-            <option [value]="book.clave">{{book.titulo}}</option>
+            <option [value]="book.id">{{book.title}}</option>
         }
     </select>
 
     @if (book$ | async; as book) {
         <br>
         <br>
-        <button type="button" (click)="handlerShowDishes($event)">Ver platos del libro {{book.titulo}}</button>
+        <button type="button" (click)="handlerShowDishes($event)">Ver platos del libro {{book.title}}</button>
     }
 } @else {
     <p>Recuperando los libros. Espere, por favor.</p>
