@@ -1,0 +1,42 @@
+:host {
+    display: inline-block;
+    min-height: 100dvh;
+    min-width: 100dvw;
+    border: solid 5px red;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.company-name {
+    flex: 1 1 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear 0s infinite;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 50%;
+    }
+}
+
+@keyframes spin {
+    from {
+        rotate: 0turn;
+    }
+    to {
+        rotate: 1turn;
+    }
+}

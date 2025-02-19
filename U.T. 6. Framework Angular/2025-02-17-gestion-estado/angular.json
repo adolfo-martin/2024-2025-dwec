@@ -3,17 +3,17 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "2025-02-14-thermomix-completo": {
+    "2025-02-17-gestion-estado": {
       "projectType": "application",
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/2025-02-14-thermomix-completo",
+            "outputPath": "dist/2025-02-17-gestion-estado",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "2025-02-14-thermomix-completo:build:production"
+              "buildTarget": "2025-02-17-gestion-estado:build:production"
             },
             "development": {
-              "buildTarget": "2025-02-14-thermomix-completo:build:development"
+              "buildTarget": "2025-02-17-gestion-estado:build:development"
             }
           },
           "defaultConfiguration": "development"

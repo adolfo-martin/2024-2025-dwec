@@ -1,0 +1,18 @@
+<header>
+  <div class="company-name">IES Arcas Meca</div>
+
+  @if (authService.isLogged()) {
+    <div>
+      <div>{{authService.fullname()}}</div>
+      <button type="button" (click)="authService.closeSession()">Cerrar sesión</button>
+    </div>
+  } @else {
+    <button type="button" (click)="authService.openSession('adolfo.martin', 'Hola1234')">Iniciar sesión</button>
+  }
+</header>
+
+@if (authService.isLoading()) {
+  <dialog open>
+    <div class="spinner"></div>
+  </dialog>
+}

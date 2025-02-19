@@ -1,4 +1,4 @@
-<table *ngIf="books$ | async as books">
+<table class="my-table" *ngIf="books$ | async as books">
     <thead>
         <tr>
             <th>Libros</th>
@@ -6,7 +6,8 @@
     </thead>
     <tbody>
         <tr *ngFor="let book of books">
-            <td>{{ book.titulo }}</td>
+            <!-- <td (click)="gotoAndShowDishes(book.clave)">{{ book.titulo }}</td> -->
+            <td [attr.data-book]="book.clave" (click)="gotoAndShowDishes($event)">{{ book.titulo }}</td>
         </tr>
     </tbody>
 </table>

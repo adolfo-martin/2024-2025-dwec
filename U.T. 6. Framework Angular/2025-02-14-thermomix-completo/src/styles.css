@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+    td {
+        @apply bg-client-blue-dark text-3xl;
+    }
+} */
+
+@layer base {
+    h1 {
+        @apply text-3xl font-extrabold;
+    }
+}
+
+@layer components {
+    .my-table th {
+        @apply border-2 border-client-blue-dark bg-client-blue-dark text-client-blue-light;
+    }
+
+    .my-table td {
+        @apply border-2 border-client-blue-dark bg-client-blue-light;
+    }
+
+    .my-button {
+        @apply py-2 px-6 bg-primary text-light rounded-full;
+    }
+}
