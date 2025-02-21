@@ -1,7 +1,8 @@
 <h1>Libros</h1>
 
-<table-books></table-books>
+<table-books (bookchanged)="bookSelected=$event"></table-books>
+<!-- <table-books></table-books> -->
 
 
 <br><br>
-<button type="button" class="my-button">Ver platos del libro seleccionado</button>
+<button type="button" class="my-button" (click)="gotoAndShowDishes($event)">Ver platos del libro seleccionado</button>

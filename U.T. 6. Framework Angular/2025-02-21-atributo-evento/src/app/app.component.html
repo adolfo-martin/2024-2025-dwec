@@ -1,0 +1,13 @@
+<div>
+  <b>Carrito</b>
+  <p>{{quantity}}</p>
+  <p>{{totalPrice}}</p>
+</div>
+
+<div *ngIf="products$ | async as products">
+
+  <card-product *ngFor="let product of products" [name]="product.name" [price]="product.price" 
+    [image]="product.image"
+    (productAdded)="addToCart($event)"
+  ></card-product>
+</div>

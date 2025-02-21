@@ -12,7 +12,8 @@ import { Observable } from 'rxjs';
 export class TableDishesComponent implements OnInit {
   dishes$: Observable<any> | undefined;
 
-  @Input('book') bookId: string | undefined | null;
+  @Input('book') 
+  bookId: string | undefined | null;
   
   constructor(private service: ThermomixService) { }
   

@@ -1,0 +1,7 @@
+td:has(input:checked) {
+    background-color: chartreuse;
+}
+
+input[type=radio] {
+    display: none;
+}

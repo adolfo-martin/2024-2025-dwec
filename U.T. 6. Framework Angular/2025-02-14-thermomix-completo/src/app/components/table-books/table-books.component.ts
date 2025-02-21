@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ThermomixService } from '../../services/thermomix.service';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'table-books',
@@ -11,10 +10,11 @@ import { Router } from '@angular/router';
 })
 export class TableBooksComponent {
   books$;
+  @Output('bookchanged') 
+  private bookChangedEmitter = new EventEmitter<string>();
 
   constructor(
     private service: ThermomixService,
-    private router: Router,
   ) {
     this.books$ = this.service.retrieveBooks$();
   }
@@ -23,10 +23,8 @@ export class TableBooksComponent {
   //   console.log('gotoAndShowDishes: ', bookId);
   // }
 
-  gotoAndShowDishes(event: MouseEvent) {
-    // console.log('gotoAndShowDishes: ', event.target.dataset.book);
-    // @ts-ignore
-    const bookId = event.target.dataset.book;
-    this.router.navigate(['books', bookId, 'dishes']);
+  reportBookSelected(bookId: string) {
+    // const bookId = event.target.dataset.book;
+    this.bookChangedEmitter.emit(bookId);
   }
 }

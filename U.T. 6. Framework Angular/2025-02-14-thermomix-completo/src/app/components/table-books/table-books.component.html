@@ -6,8 +6,12 @@
     </thead>
     <tbody>
         <tr *ngFor="let book of books">
-            <!-- <td (click)="gotoAndShowDishes(book.clave)">{{ book.titulo }}</td> -->
-            <td [attr.data-book]="book.clave" (click)="gotoAndShowDishes($event)">{{ book.titulo }}</td>
+            <td [attr.data-book]="book.clave" (click)="reportBookSelected(book.clave)">
+                <label>
+                    <input type="radio" name="book">
+                    {{ book.titulo }}
+                </label>
+            </td>
         </tr>
     </tbody>
 </table>
