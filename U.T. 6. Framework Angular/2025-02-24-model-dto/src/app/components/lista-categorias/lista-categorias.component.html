@@ -1,0 +1,13 @@
+<ol *ngIf="servicio.recuperarCategorias$()| async as categorias; else spinner">
+    <li [attr.data-categoria]="categoria.id" *ngFor="let categoria of categorias">
+        <strong>{{categoria.nombre}}</strong>
+
+        <ol *ngIf="servicio.recuperarProductosPorCategoria$(categoria.id) | async as productos">
+            <li *ngFor="let producto of productos">{{producto.title}}</li>
+        </ol>
+    </li>
+</ol>
+
+<ng-template #spinner>
+    <p>Espere, por favor. Recuperando información ...</p>
+</ng-template>
