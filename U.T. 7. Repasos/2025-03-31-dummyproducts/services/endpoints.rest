@@ -1,0 +1,2 @@
+### Todas las categorías
+GET https://dummyjson.com/products/categories/?delay=2000
